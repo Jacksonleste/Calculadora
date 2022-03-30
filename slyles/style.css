@@ -11,53 +11,77 @@ html{
 }
 
 body{
+    background-image: url("../media/pxfuel.com.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 120vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #calculator{
-    width: 50vw;
-    min-width: 30rem;
     margin: auto;
+    width: 50vw;
+    min-width: 50rem;
+    height: auto;
+    /* border: .5rem solid black; */
+    box-shadow: 1rem 1rem 0 #3a80be;
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
 #calcHead{
-    width: 50vw;
-    min-width: 30rem;
-    background-color: blue;
-    width: 50vw;
-    height: 7rem;
+    font-family: 'Bebas Neue', cursive;
+    /* width: 50vw; */
+    padding: 1rem 2rem;
+    text-align: end;
+    min-width: 40rem;
+    background-color: #4eacff;
+    height: 10rem;
 }
 
-#calcHead input{
-    display: block;
+#display{
+    padding: 0 .5rem;
+    margin: 2rem auto;
     background-color: white;
-    margin: 2remauto;
-    width: 40vw;
-    min-width: 20rem;
-    height: 3rem;
+    /* margin: 2rem auto; */
+    border-radius: 1rem;
+    width: 100%;
+    min-width: 30rem;
+    height: 7rem;
+    font-size: 6rem;
 }
 
 #calcBody{
-    background-color: rgb(78, 172, 255);
+    /* width: 50vw; */
+    min-width: 40rem;
+
+    background-color: #4eacff;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
     padding: 1rem 2rem;
-    border-radius: 0 0 2rem 2rem ;
 }
 
 #calcBody button{
     margin: 2rem;
     border-radius: 1rem;
-    box-shadow: -.5rem .05rem 0rem black;
+    box-shadow: 0 -.5rem 0rem rgb(167, 167, 167) inset;
     font-size: 3rem;
     font-weight: bold;
-    border: .1rem solid black;
+    position: relative;
     padding: 2rem 1rem;    
 }
 
-#equal{
+#calcBody button:active{
+    transition: .1s;
+    transform: scale(.95);
+    box-shadow: none;
+    top: .2rem;
+}
+
+#igual{
     grid-row-start: 4;
     grid-row-end: 6;
 
